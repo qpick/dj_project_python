@@ -3,7 +3,7 @@
 def main():
   with open('example.txt', 'r') as f:
      f_contents = f.read()
-     # print(f_contents, end='')
+     print(f_contents, end='')
 
   pass
 
