@@ -1,17 +1,23 @@
-# imports go here
+from class_integration import Parserfile
+
+
+# importiranje na funkcija
+# from function_integration import parser
+
 
 def main():
-  with open('example.txt', 'r') as f:
-     f_contents = f.read()
-     print(f_contents, end='')
+    create_parser = Parserfile()
+    create_parser.characters('example.txt')
+    counter = create_parser.sentences('example.txt')
+    create_parser.create_dict('example.txt', counter)
+    create_parser.create_list('example.txt')
 
-  pass
+    # povikuvanje na funckija
+    # parser()
+
+
+# pass
 
 
 if __name__ == '__main__':
-  main()
-
-
-
-
-
+    main()
