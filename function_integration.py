@@ -1,23 +1,11 @@
-def parser():
-    file = open("example.txt", "r")
-    counter = 0
-    content = file.read()
-    co_list = content.split("\n")
-    for i in co_list:
-        if i:
-            counter += 1
+def process_function(file_name):
+    lines = open(file_name, 'r').readlines()
 
-    print("%s = %d" % ("Found total of sentences", counter), file=open("example.txt", "a"))
-    print("%s = %d\n" % ("sentences", counter), file=open("example.txt", "a"))
-    number_of_characters = len(content)
-    print("%s = %d" % ("Found total of characters", number_of_characters), file=open("example.txt", "a"))
-    new_dict = {'total_sentences': counter}
-    print(([f'{key} : {new_dict[key]}' for key in new_dict]), file=open("example.txt", "a"))
+    number_of_sentences = len(lines)
+    characters = 0
 
-    file = open("example.txt", "r")
-    lists = []
-    lines = file.read().splitlines()
-    for line in lines:
-        lists.append(line)
+    for lines in lines:
+        characters += len(lines)
 
-    print(lists, file=open("example.txt", "a"))
+    new_dict = {"sentences": lines, "stats": {'total_sentences': number_of_sentences, 'total_chars': characters}}
+    return new_dict
