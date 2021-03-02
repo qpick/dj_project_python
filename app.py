@@ -6,10 +6,7 @@ def main():
     """Main entry"""
     start_time = time.time()
 
-    file = 'example.txt'
-    # file = 'test.txt'
-    file_parser = FileParser()
-    data = file_parser.parse(file)
+    data = (FileParser()).parse('example.txt')
 
     print_output_data(data['sentences'], data['stats']['total_chars'])
     print_time_for_calculating_and_output(start_time)

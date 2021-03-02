@@ -1,10 +1,13 @@
 # Data parser
-Python data parser exersize
+    Python data parser exersize
+    
+    Insert file with text and return text of sentences, total number of sentences and characters
 
-Insert file with text and return text of sentences, total number of sentences and characters
 
+## Run unit tests
 
-pip3 install nltk
+    python3 -m unittest test -v
+
 
 
 
