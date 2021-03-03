@@ -1,12 +1,13 @@
-# Data parser
-    Python data parser exersize
-    
-    Insert file with text and return text of sentences, total number of sentences and characters
+## Create and load the virtualenv environment
 
+    virtualenv -p python3.8 venv
+    . venv/bin/activate
 
-## Run unit tests
+    Note: replace 3.8 with the desired runtime version installed on your OS.
 
-    python3 -m unittest test -v
+## Run the tests:
+
+    python -m unittest test -v
 
 
 
